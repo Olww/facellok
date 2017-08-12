@@ -1,0 +1,4 @@
+rodion:
+  name: Rodion Radchenko
+  email: radchenko.rodion@gmail.com
+  password_digest: <%= User.digest('password') %>
