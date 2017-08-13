@@ -2,3 +2,16 @@ rodion:
   name: Rodion Radchenko
   email: radchenko.rodion@gmail.com
   password_digest: <%= User.digest('password') %>
+  admin: true
+
+noadmin:
+  name: Trully Noadmin
+  email: n.admin@gmail.com
+  password_digest: <%= User.digest('password') %>
+
+<% 30.times do |n| %>
+user_<%= n %>:
+  name:  <%= "User #{n}" %>
+  email: <%= "user-#{n}@example.com" %>
+  password_digest: <%= User.digest('password') %>
+<% end %>
