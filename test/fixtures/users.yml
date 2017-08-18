@@ -13,6 +13,20 @@ noadmin:
   activated: true
   activated_at: <%= Time.zone.now %>
 
+lana:
+  name: Trully Lana
+  email: lana@gmail.com
+  password_digest: <%= User.digest('password') %>
+  activated: true
+  activated_at: <%= Time.zone.now %>
+
+malory:
+  name: Trully Malory
+  email: malory@gmail.com
+  password_digest: <%= User.digest('password') %>
+  activated: true
+  activated_at: <%= Time.zone.now %>
+
 <% 30.times do |n| %>
 user_<%= n %>:
   name:  <%= "User #{n}" %>

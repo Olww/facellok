@@ -77,4 +77,18 @@ class UserTest < ActiveSupport::TestCase
     end
   end
 
+  test "feed should have the right posts" do
+    rodion = users(:rodion)
+    noadmin  = users(:noadmin)
+    lana    = users(:lana)
+    lana.microposts.each do |post_following|
+      assert rodion.feed.include?(post_following)
+    end
+    rodion.microposts.each do |post_self|
+      assert rodion.feed.include?(post_self)
+    end
+    noadmin.microposts.each do |post_unfollowed|
+      assert_not rodion.feed.include?(post_unfollowed)
+    end
+  end
 end

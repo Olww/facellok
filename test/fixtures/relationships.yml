@@ -1,0 +1,15 @@
+one:
+  follower: rodion
+  followed: lana
+
+two:
+  follower: rodion
+  followed: malory
+
+three:
+  follower: lana
+  followed: rodion
+
+four:
+  follower: noadmin
+  followed: rodion
